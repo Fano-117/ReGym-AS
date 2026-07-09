@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F0F0"
+    android:gravity="center_horizontal"
+    tools:context=".manual_gimnasia.movimiento_Individual.Movimiento_Pantalla">
+
+    <ImageView
+        android:id="@+id/Fondo_ginda2"
+        android:layout_width="634dp"
+        android:layout_height="119dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fondo_vino" />
+
+    <Button
+        android:id="@+id/Regresar_btn"
+        android:layout_width="76dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#781005"
+        android:drawableTop="@drawable/flechamedia_regreso"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/Fondo_ginda2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Fondo_ginda2"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/Mensaje_bienvenida"
+        android:layout_width="329dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="12dp"
+        android:background="#781005"
+        android:gravity="center"
+        android:text="Titutlo"
+        android:textColor="#F8F6F6"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Fondo_ginda2" />
+
+    <ImageView
+        android:id="@+id/Logo_INCUFIDEZ"
+        android:layout_width="116dp"
+        android:layout_height="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/logo_incufidez_fondo_vino" />
+
+
+    <LinearLayout
+        android:id="@+id/opciones"
+        android:layout_width="match_parent"
+        android:layout_height="440dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/botonesLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="16dp">
+
+                <ImageButton
+                    android:id="@+id/descripcion_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boton_cuadrado"
+                    android:backgroundTint="#781005"
+                    android:text="Mostrar tabla"
+                    app:srcCompat="@drawable/mostrar_descripcion_btn" />
+
+                <ImageButton
+                    android:id="@+id/tabla_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boton_cuadrado"
+                    android:backgroundTint="#781005"
+                    android:text="Mostrar tabla"
+                    app:srcCompat="@drawable/mostrar_tabla_btn" />
+
+                <ImageButton
+                    android:id="@+id/comentarios_btn"
+                    android:layout_width="140dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/boton_cuadrado"
+                    android:backgroundTint="#781005"
+                    android:text="Mostrar comentarios"
+                    app:srcCompat="@drawable/mostrar_comentarios_btn" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/description_seccion"
+            android:layout_width="wrap_content"
+            android:layout_height="155dp"
+            android:layout_gravity="center_horizontal"
+            android:fillViewport="true"
+            android:visibility="gone">
+
+
+            <TextView
+                android:id="@+id/descripcion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="descripcion" />
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/tabla_seccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center_horizontal">
+            <!-- -->
+
+            <ImageView
+                android:id="@+id/tabla"
+                android:layout_width="401dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="0dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintBottom_toTopOf="@+id/imageView4"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.679"
+                app:layout_constraintStart_toEndOf="@+id/Mensaje_bienvenida"
+                app:layout_constraintTop_toBottomOf="@+id/Fondo_ginda2"
+                app:srcCompat="@drawable/tabla_piso_n1_m1" />
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/commentarios_seccion"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:visibility="gone">
+            <!---->
+
+            <!-- Contenedor para la lista de comentarios -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:background="#FFFFFF">
+
+                <!-- RecyclerView para mostrar la lista de comentarios -->
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewComentarios"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#FFFFFF" />
+
+                <!-- Añadir un nuevo comentario -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="130dp"
+                    android:background="#f0f0f0"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <EditText
+                        android:id="@+id/nuevo_comentario_edit_text"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Agregar comentario..." />
+
+                    <ImageButton
+                        android:id="@+id/agregar_comentario_btn"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_gravity="end"
+                        android:layout_marginTop="4dp"
+                        android:background="#F4F0F0"
+                        android:backgroundTint="#781005"
+                        android:text="Agregar"
+                        app:srcCompat="@drawable/enviar" />
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/boton_ayuda_imagen"
+        android:layout_width="52dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:background="#F4F0F0"
+        android:backgroundTint="#F4F0F0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.794"
+        app:layout_constraintStart_toEndOf="@+id/Mensaje_bienvenida"
+        app:layout_constraintTop_toBottomOf="@+id/Fondo_ginda2"
+        app:srcCompat="@drawable/ayuda_btn" />
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Mensaje_bienvenida">
+
+        <ImageView
+            android:id="@+id/Movimiento_gift"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/m1_n1_piso" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

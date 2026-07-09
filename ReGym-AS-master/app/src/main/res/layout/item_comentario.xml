@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="#f2f2f2"
+    android:layout_marginBottom="8dp">
+
+    <!-- TextView para el nombre del usuario (opcional) -->
+    <TextView
+        android:id="@+id/tvNombreUsuario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nombre del Usuario"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        android:paddingBottom="4dp" />
+
+    <!-- EditText para editar el comentario -->
+    <EditText
+        android:id="@+id/etEditarComentario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edita tu comentario aquí..."
+        android:textSize="16sp"
+        android:padding="4dp"
+        android:visibility="gone" />
+
+    <EditText
+        android:id="@+id/escribirRespuesta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escribe tu respuesta aqui..."
+        android:textSize="16sp"
+        android:padding="4dp"
+        android:visibility="gone"
+        />
+    <!-- TextView para el contenido del comentario -->
+    <TextView
+        android:id="@+id/tvComentario"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Este es un comentario de ejemplo."
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:padding="4dp" />
+
+    <!-- RecyclerView para mostrar las respuestas -->
+
+
+    <!-- Sección para el ícono de like y el contador -->
+    <LinearLayout
+        android:id="@+id/likeSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="4dp"
+        android:gravity="start|center_vertical"
+        >
+
+        <!-- Botón de "like" -->
+        <ImageButton
+            android:id="@+id/btn_Like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/like"
+            android:layout_marginEnd="-4dp" /> <!-- Add marginEnd -->
+             />
+        <!-- Contador de likes -->
+        <TextView
+            android:id="@+id/tvLikesCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="0"
+            android:textSize="20sp"
+            android:textColor="#555555"
+            android:layout_marginEnd="150dp" /> <!-- Add marginEnd -->/>
+
+        <ImageButton
+            android:id="@+id/btn_Editar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="0dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+
+            android:src="@drawable/editar" />
+
+        <ImageButton
+            android:id="@+id/btn_Eliminar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@id/btn_Editar"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"
+            android:src="@drawable/borrar" />
+
+        <ImageButton
+            android:id="@+id/btn_Responder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"
+            android:src="@drawable/responder" />
+
+        <ImageButton
+            android:id="@+id/btn_Respuestas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="0dp"
+            android:src="@drawable/flecha_abajo"
+            app:layout_constraintEnd_toStartOf="@id/btn_Eliminar"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewRespuestas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:visibility="gone" /> <!-- Por defecto está oculto -->
+
+
+    <!-- TextView para la fecha del comentario (opcional) -->
+
+</LinearLayout>

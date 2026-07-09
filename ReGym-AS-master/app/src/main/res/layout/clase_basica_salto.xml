@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="clase_basica.Clase_Basica_Salto">
+
+
+    <ImageView
+        android:id="@+id/Fondo_ginda2"
+        android:layout_width="634dp"
+        android:layout_height="119dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/fondo_vino" />
+
+    <TextView
+        android:id="@+id/Mensaje_bienvenida"
+        android:layout_width="266dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="12dp"
+        android:background="#781005"
+        android:gravity="center"
+        android:text="Clase Básica de Salto"
+        android:textColor="#F8F6F6"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Fondo_ginda2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="116dp"
+        android:layout_height="92dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.025"
+        app:srcCompat="@drawable/logo_incufidez_fondo_vino" />
+
+
+
+    <Button
+        android:id="@+id/Regresar_btn"
+        android:layout_width="76dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#781005"
+        android:drawableTop="@drawable/flechamedia_regreso"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="@+id/Fondo_ginda2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.907"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/Fondo_ginda2"
+        app:layout_constraintVertical_bias="0.2" />
+
+
+
+
+    <ScrollView
+        android:layout_width="346dp"
+        android:layout_height="459dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.39"
+        android:background="#e0e0e0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Mensaje_bienvenida"
+        app:layout_constraintVertical_bias="0.223">
+
+
+        <TextView
+            android:id="@+id/Calentamiento_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="-Calentamiento (15 min)\n\n
+- Trote Suave en el Podio (5 min)\n
+  - Correr suavemente alrededor del podio para calentar el cuerpo.\n\n
+- Rotaciones Articulares (5 min)\n
+  - Cuello: Rotaciones a izquierda y derecha (5 veces por lado).\n
+  - Brazos: Rotaciones hacia adelante y hacia atrás (10 veces por lado).\n
+  - Caderas: Círculos amplios con las caderas (5 veces por lado).\n
+  - Tobillos: Rotaciones de tobillos (10 segundos por pie).\n\n
+- Estiramientos Dinámicos (5 min)\n
+  - Toques de Punta: Toque de los pies sin doblar rodillas (10 veces).\n
+  - Estiramiento de Cuadriceps: De pie, llevar el talón hacia los glúteos (10 segundos por pierna).\n
+  - Estiramiento de Isquiotibiales: Mantener tocando las puntas de los pies sin doblar rodillas (10 segundos).\n\n
+-Fortalecimiento (5/10 min)\n\n
+- Postura de Plancha (3 series de 30 segundos)\n
+  - Mantener una plancha con la espalda recta y los pies juntos.\n\n
+- Sentadillas Explosivas (3 series de 10 repeticiones)\n
+  - Realizar sentadillas con un salto explosivo al final.\n\n
+- Abdominales Agrupados (3 series de 10 repeticiones)\n
+  - Agrupar el cuerpo tocando las rodillas con el pecho.\n\n
+-Trabajo en Aparato (20/25 min)\n\n
+- Saltos Verticales con Elevación de Rodillas (3 series de 10 repeticiones)\n
+  - Saltar elevando las rodillas al pecho.\n\n
+- Salto con Medio Giro (3 series de 8 repeticiones)\n
+  - Saltar y girar 180° en el aire antes de aterrizar.\n\n
+- Salto con Desplazamiento (3 series de 10 repeticiones)\n
+  - Saltar de un punto a otro (aproximadamente 1 metro de distancia).\n\n
+- Salto sobre Obstáculo Bajo (3 series de 8 repeticiones)\n
+  - Saltar sobre un pequeño obstáculo.\n\n
+- Salto en Plataforma Elevada (3 series de 10 repeticiones)\n
+  - Saltar desde el suelo a una plataforma elevada y regresar.\n\n
+-Acondicionamiento (10 min)\n\n
+- Sentadillas con Salto (30 repeticiones)\n
+  - Realizar sentadillas con un salto al final.\n\n
+- Abdominales a Tocarse las Puntas (30 repeticiones)\n
+  - Elevar el torso para tocar las puntas de los pies.\n\n
+- Saltos de Rana (30 repeticiones)\n
+  - Saltar desde una posición de squat profunda.\n\n
+- Supermanes (30 repeticiones)\n
+  - Boca abajo, levantar brazos y piernas simultáneamente.\n\n
+-Estiramiento Final (Tiempo Restante, 5/10 min)\n\n
+- Estiramiento de Isquiotibiales (15 segundos por pierna)\n
+  - Sentado, estirar una pierna hacia adelante y tocar las puntas de los pies.\n\n
+- Estiramiento de Cuádriceps (15 segundos por pierna)\n
+  - Llevar el talón hacia los glúteos.\n\n
+- Estiramiento de Espalda\n
+  - Estirarse hacia adelante con las manos estiradas en el suelo (30 segundos).\n\n
+- Estiramiento de Caderas\n
+  - Sentarse con las piernas cruzadas y empujar las rodillas hacia el suelo (30 segundos)."
+
+            />
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
